@@ -1,27 +1,25 @@
+import java.io.IO.print
 import java.io.IO.println
 
 
 fun main() {
-    //nullable values
-//    val userInput = readLine()
-//    println(userInput.toUpperCase()) //error: value can be nullable
+    //array: ways to save several objects inside single object
+//    val myIntArray = arrayOf(3, 2, 6, 4)
+//    val myMixArray = arrayOf("hello", "guys", 3)
+
+    val first = "hello"
+    val second = "guys"
+    val third = "whats up?"
+    //above and below line is equal
+    val myStringArray = arrayOf("hello", "guys", "what's up")
+    println(myStringArray) //can't print array with println method
+
+    //we can access individual elements of array using index
+    println(myStringArray[0]) //hello (first element)
+    println(myStringArray[1])
+    println(myStringArray[2])
+    println(myStringArray[3]) //Exception: ArrayIndexOutOfBound
 
 
-    //readLine() always return string value even you enter number
-    println("Enter something: ")
-    val userInput = readLine()
-    if(userInput != null)
-        println(userInput.toInt() - 5)
-
-
-    //practice task
-    val inputAge = readLine()
-    val age = inputAge.toInt()
-    if(age > 0 && age < 18)
-        println("You are not an adult.")
-    else if(age >= 18 && age <65)
-        println("You are an adult.")
-    else
-        println("You are really really old")
 
 }
