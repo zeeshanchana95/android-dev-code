@@ -1,34 +1,27 @@
-import java.io.IO.print
 import java.io.IO.println
 
 
 fun main() {
-    //conditions (if statements)
-    val x = 7
-    val y = 7
+    //nullable values
+//    val userInput = readLine()
+//    println(userInput.toUpperCase()) //error: value can be nullable
 
-    if(x < y) {
-        println("x is lesser than y")
-    } else if(x > y) {
-        println("x is greater than y")
-    } else {
-        println("x is equal to y")
-    }
-    println("This will always be executed")
 
-    val z = if(x + y == 14) 3 else 4
-    if(x < y || y * y == 49)
-        println("at least one of the conditions is true")
-    println("The value of z is $z")
+    //readLine() always return string value even you enter number
+    println("Enter something: ")
+    val userInput = readLine()
+    if(userInput != null)
+        println(userInput.toInt() - 5)
 
 
     //practice task
-    val string = "racecar"
-    val reversedString = string.toLowerCase().reversed()
-    println("The string is $string")
-    if(string == reversedString)
-        println("The string $string is a palindrom")
+    val inputAge = readLine()
+    val age = inputAge.toInt()
+    if(age > 0 && age < 18)
+        println("You are not an adult.")
+    else if(age >= 18 && age <65)
+        println("You are an adult.")
     else
-        println("The string $string is not a palindrome")
+        println("You are really really old")
 
 }
