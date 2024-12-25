@@ -1,41 +1,34 @@
+import java.io.IO.print
 import java.io.IO.println
 
 
 fun main() {
-    //comparison operators give result as true or false
-    val x = 4
-    val y = 5
-    println(x == y) //true when x = y
-    println(x > y)
-    println(x >= y)
-    println(x < y)
-    println(x <= y)
-    println(x != y)
+    //conditions (if statements)
+    val x = 7
+    val y = 7
 
-    //logical operators && (AND), || (OR), ! (NOT) used to combine expressions
-    val a = 6
-    val b = 10
-    println(x == y && a == b) //true when all expressions result as true
-    println(x == y || a == b) //true when any one expression results as true
-    println(!(x == y) || a == b)
+    if(x < y) {
+        println("x is lesser than y")
+    } else if(x > y) {
+        println("x is greater than y")
+    } else {
+        println("x is equal to y")
+    }
+    println("This will always be executed")
 
-    //NOTE: AND operator (like * in math) expression will be evaluated first
-    println(!(x == y || a == b && a > y))
+    val z = if(x + y == 14) 3 else 4
+    if(x < y || y * y == 49)
+        println("at least one of the conditions is true")
+    println("The value of z is $z")
 
 
     //practice task
-    val simpleExpression = 3 > 4 || 4 > 3  && 4 <= 4 //true
-
-    val bool = true
-    val x1 = 9
-    val y1 = 3
-    val z1 = 9
-    val hardExpression = !(x1 != z1) && bool || z1 > (x1 + y1) && (!bool || y1 < z1) //true
-    println(hardExpression)
-//                           9    9       true    9     9    3         true   3    9
-//                           true      &&  true || 9 > 12        &&     false ||  true
-//                           true     &&  true    || false        && false || true
-//                           true ||  false || true
-//                            true
+    val string = "racecar"
+    val reversedString = string.toLowerCase().reversed()
+    println("The string is $string")
+    if(string == reversedString)
+        println("The string $string is a palindrom")
+    else
+        println("The string $string is not a palindrome")
 
 }
