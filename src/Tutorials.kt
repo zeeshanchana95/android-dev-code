@@ -1,32 +1,18 @@
 import java.io.IO.println
 
 fun main() {
-    //    val result = 15 + 7
+    var x = 20.123235F //float (32 bits) memory but less accurate
+    var y = 8F
+    println("The result of x / y is: ${x / y}")
 
-    //println(15 + 7)
-    //println(15 - 7)
-    //println(15 * 7)
-    //println(15 / 7)
+    var x1 = 20.1534334344334 //for double (64 bits) but more accurate
+    var y1 = 8
+    println("The result of x / y is: ${x / y}")
 
-//    val x = 15
-//    val y = 7
-//    val result = x + y
-//    println(result)
-
-    var x = 20
-    var y = 8
-    println("The result of x + y is: ${x + y}")
-
-    x += 10 //x = x + 10
-    println("The result of x + y is now ${x + y}")
-
-
-    //practice task:
-    var x1 = 3
-    var y1 = 4
-    var z1 = 5
-    println("x: $x1")
-    println("x + y: ${x1 + y1}")
-    println("x + y + z: ${x1+y1+z1}")
-
+    //practice task
+    //calculating volume of sphere
+    val PI = 3.142
+    var radius = 5.5
+    var volumeOfSphere = 0.75 * PI * (radius*radius*radius)
+    println("The volume of the sphere with the radius $radius is $volumeOfSphere")
 }
