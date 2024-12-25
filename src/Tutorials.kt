@@ -1,25 +1,32 @@
 import java.io.IO.println
 
 fun main() {
-    var myVariable:Int = 5
-    println("The value of my var int variable is : $myVariable")
-    myVariable = 1
-    println("The value of my var int variable is now: $myVariable")
+    //    val result = 15 + 7
 
-    val myVariable1 = 1
-    println("The value of my val variable is $myVariable1")
-//    myVariable1 = 2
-    println("The value of val variable is now: $myVariable1")
+    //println(15 + 7)
+    //println(15 - 7)
+    //println(15 * 7)
+    //println(15 / 7)
 
-    var myBoolVariable = true
-    println("The value of my bool variable is: $myBoolVariable")
-    myBoolVariable = false //can't assign 1 or 0
-    println("The value of my bool variable is now: $myBoolVariable")
+//    val x = 15
+//    val y = 7
+//    val result = x + y
+//    println(result)
+
+    var x = 20
+    var y = 8
+    println("The result of x + y is: ${x + y}")
+
+    x += 10 //x = x + 10
+    println("The result of x + y is now ${x + y}")
 
 
     //practice task:
-    var myName:String = "Zeeshan Ahmed"
-    var myAge:Int = 23
-    println("My name is: $myName.")
-    println("I am $myAge years old.")
+    var x1 = 3
+    var y1 = 4
+    var z1 = 5
+    println("x: $x1")
+    println("x + y: ${x1 + y1}")
+    println("x + y + z: ${x1+y1+z1}")
+
 }
