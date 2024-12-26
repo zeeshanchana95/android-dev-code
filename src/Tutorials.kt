@@ -57,7 +57,7 @@ fun main() {
             mutableList2.add(number)
         }
     }
-    for(i in mutableList2.size downTo 1) {
+    for(i in mutableList2.size - 1 downTo 0) {
         println(mutableList2[i])
     }
 
@@ -68,7 +68,7 @@ fun main() {
     val number = readLine()?.toInt()
     if(number != null) {
         var nextNumber = 0
-        for(i in 1..number-2) {
+        for(i in 2..number-1) {
             nextNumber = mutableList3[i-1] + mutableList3[i-2]
             mutableList3.add(nextNumber)
         }
