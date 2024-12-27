@@ -4,6 +4,7 @@ fun main() {
     printThreeLines()
     printPow(3, 5)
     printPow(5,2)
+    calculateSum(5)
 }
 
 fun printPow(base: Int, exponent:Int){
@@ -17,6 +18,13 @@ fun printPow(base: Int, exponent:Int){
 fun printThreeLines() {
     println("First")
     println("Second")
-    println("Thrid")
+    println("Third")
+}
 
+fun calculateSum(num:Int) {
+    var sum = 0
+    for(i in 1..num) {
+        sum += num
+    }
+    println("The sum of numbers from 1 to $num is: $sum")
 }
