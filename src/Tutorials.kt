@@ -1,45 +1,51 @@
 import java.io.IO.println
 
 fun main() {
-    val pow = printPow(3,5)
-    println("3 to the power of 5 is: $pow")
-    println(multiply(3,5))
+    val array = intArrayOf(10,20,25)
+    val max = getMax(1,2,7,5,3, *array,4,6,1,10,15,4)
+    println("The maximum is $max")
+    searchFor("How to become a good programmer.")
+    searchFor(search = "How to become the best Kotlin Programmer.", searchEngine = "Bing")
+    searchFor(searchEngine = "Bing", search = "How to become best Kotlin programmer.")
 
-    val list = listOf(3,2,5,1,5,6,7)
-    val index = returnItemIndex(list, 5)
-    println("The index of 5 is: $index")
+    val sum = alternatingSum(3,4,5,2,1,2,3)
+    println("The alternating sum is $sum")
 }
 
-fun printFirstItem(list:listOf<Int>) = println(list[0])
+//vararg:
+    //- used to accept one or more than one input from user
+    //- used to insert array items in between to our vararg elements
 
-//single line functions
-fun multiply(a:Int, b:Int) = a * b
+//default arguments:
+    //- set initial value of an argument during function declaration
 
-fun printPow(base: Int, exponent:Int):Int {
-    var result = 1
-    for(i in 1..exponent) {
-        result *= base
-    }
-    return result
-//    println("after") //ignored
+//named Parameters or Named Arguments:
+    //- used for our easiness if we have lots of parameters
+    //- you don't need to remember its order but just use name of parameter and then assign value to it.
+
+
+fun searchFor(search: String, searchEngine:String = "Google") {
+    println("Searching for $search on $searchEngine")
 }
-
-
-// practice task: given a list with items. user give item to search from list and program will return index of item.
-fun returnItemIndex(list:listOf<Int>, searchedItem:Int):Int {
-    for (item in 0..list.size - 1) {
-        if(searchedItem == list[item]) {
-            return item
+fun getMax(vararg numbers:Int):Int {
+    var max = numbers[0]
+    for(number in numbers) {
+        if(number > max) {
+            max = number
         }
     }
+    return max
 }
 
-
-//practice task
-fun calculateSum(num:Int):Int {
-    var sum = 0
-    for(i in 1..num) {
-        sum += num
+//homework: create a function named "alternatingSum" that takes vararg parameter and the function should return the alternating sum (firstNumber - secondNumber + thirdNumber - fourthNumber + etc. of the numbers
+fun alternatingSum(vararg numbers:Int):Int {
+    var alternativeSum = 0
+    for(i in 0..numbers.size - 1) {
+        if(i %2 == 0) {
+            alternativeSum += numbers[i]
+        } else {
+            alternativeSum -= numbers[i]
+        }
     }
-    return sum
+    return alternativeSum;
 }
