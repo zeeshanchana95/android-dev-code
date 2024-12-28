@@ -1,14 +1,16 @@
 import java.io.IO.println
 
-/**
- * Constructor:
- * - it is used to specify the values that we need to create the class
- */
 class Rectangle(
     val a:Double,
     val b:Double
 ):Shape("Rectangle") {
-    //write all the logic that is executed when create Rectangle object
+
+    //constructor and function overloading
+
+    constructor(a: Double):this(a, a)
+
+    constructor(a:Int, b:Int):this(a.toDouble(), b.toDouble())
+
     init {
         println("$name created with a = $a and b = $b")
     }
