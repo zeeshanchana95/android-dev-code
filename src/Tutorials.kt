@@ -1,26 +1,22 @@
 import java.io.IO.println
 
 fun main() {
-    val list = listOf(1,2,3,4,5)
-    val array = arrayOf(1,2,3,4,5)
+    /**
+     * Singleton Object:
+     *  - It is a type of object where only single instance exists
+     */
 
-    println(list)
+    /**
+     * Companion Object:
+     * - a type of object which belongs to specific class
+     * - basically if we want a class where we want both types of functionality of like
+     *  - we can create normal object
+     *  - we can create companion object (need class name to call variables or functions)
+     * then we use companion object there
+     * - we create companion object inside another class but not in a separate Kotlin file
+     * - syntax: companion object {}
+     */
 
-    printAlternately(array)
-}
+    val circle = Circle.randomCircle()
 
-fun printAlternately(list: List<Int>) {
-    var i = 0
-    var j = list.size - 1
-    var toggle = true
-    while (i <= j) {
-        if(toggle) {
-            println(list[i])
-            i++
-        } else {
-            println(list[j])
-            j--
-        }
-        toggle = !toggle
-    }
 }
