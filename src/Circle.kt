@@ -4,7 +4,7 @@ class Circle(
     val radius:Double
 ):Shape("circle") {
 
-    val PI = 3.141592
+    private val PI = 3.141592
     init {
         println("$name created with radius is $radius")
         println("$name area is ${area()}")

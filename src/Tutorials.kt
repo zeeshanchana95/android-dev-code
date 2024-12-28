@@ -1,12 +1,21 @@
 import java.io.IO.println
 
 fun main() {
+
     /**
-     * Inheritance:
-     *  - it is the one of the pillar of object-oriented programming where
-     *      - there is a parent class called super class which contain general functionality that other classes (subclasses or child classes) get by default
-     *      - use : besides constructor of child classes to inherit parent class
-     *      - after extending parent class, child classes will get all the methods and properties of parent class by default
+     * Visibility Modifiers:
+     * - they are used to limit where specific
+     *  - variables
+     *  - functions
+     *  - constructors
+     *  are used.
+     *
+     *  - following are visibility modifiers:
+     *      1. public: that member can be accessed by any class
+     *      2. private: that member can only be accessed inside that particular class
+     *      3. protected: that member can be accessed in that class and all its subclasses
+     *
+     *
      */
     val myCircle1 = Circle(5.0)
     myCircle1.changeName("Peter")
