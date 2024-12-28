@@ -1,22 +1,43 @@
 import java.io.IO.println
 
 fun main() {
-    /**
-     * Singleton Object:
-     *  - It is a type of object where only single instance exists
-     */
+    val a = 3.0
+    val b = 4.0
+    val height = 2.0
 
-    /**
-     * Companion Object:
-     * - a type of object which belongs to specific class
-     * - basically if we want a class where we want both types of functionality of like
-     *  - we can create normal object
-     *  - we can create companion object (need class name to call variables or functions)
-     * then we use companion object there
-     * - we create companion object inside another class but not in a separate Kotlin file
-     * - syntax: companion object {}
-     */
+    //anonymous classes
+    val parallelogram = object: Shape("Parallelogram", a, b, height )  {
 
-    val circle = Circle.randomCircle()
+        init {
+            println("Parallelogram created with a = $a and b = $b and height = $height")
+            println("The area is ${area()}")
+            println("The perimeter is ${perimeter()}")
+        }
+        override fun area(): Double {
+            return a * height
+        }
 
+        override fun perimeter(): Double {
+            return 2 * a + 2 * b
+        }
+
+        fun isRectangle():Boolean = height == b
+    }
+    println("Is the parallelogram is Rectangle? ${parallelogram.isRectangle()}")
+
+
+    val c = 5.0
+    val d = 6.0
+    val trapezium = object:Shape("Trapeeze", a, b, c, d, height) {
+        override fun area(): Double {
+            return  (a * b * height) / 2.0
+        }
+
+        override fun perimeter(): Double {
+            return a + b + c + d
+        }
+
+        fun isRectangle():Boolean = (b == b) && (height == height / 2)
+    }
+    println("Is the trapezium is Rectangle? ${trapezium.isRectangle()}")
 }
