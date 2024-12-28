@@ -14,9 +14,9 @@ class Rectangle(
     }
 
     //declaring user-defined functions
-    fun area() = a * b
+    override fun area(): Double = a * b
 
-    fun perimeter() = 2 * a + 2 * b
+    override fun perimeter(): Double = 2 * a + 2 * b
 
     fun isSquare() = a == b
 }

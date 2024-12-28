@@ -11,7 +11,7 @@ class Circle(
         println("$name perimeter is ${perimeter()}")
     }
 
-    fun area() = radius * radius * PI
+    override fun area() = radius * radius * PI
 
-    fun perimeter() = 2 * radius * PI
+    override fun perimeter() = 2 * radius * PI
 }
