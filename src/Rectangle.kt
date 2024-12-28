@@ -7,10 +7,10 @@ import java.io.IO.println
 class Rectangle(
     val a:Double,
     val b:Double
-) {
+):Shape("Rectangle") {
     //write all the logic that is executed when create Rectangle object
     init {
-        println("Rectangle created with a = $a and b = $b")
+        println("$name created with a = $a and b = $b")
     }
 
     //declaring user-defined functions
